@@ -29,7 +29,6 @@ class App extends Component {
 
     // Add multiple hidden layer
     model.add(tf.layers.dense({ inputShape: [1], units: 1, useBias: true }))
-
     model.add(tf.layers.dense({ units: 1, activation: 'sigmoid' }))
 
     // Add an output layer
@@ -85,7 +84,7 @@ class App extends Component {
     })
 
     const batchSize = 28
-    const epochs = 50
+    const epochs = 200
 
     return await model.fit(inputs, labels, {
       batchSize,
@@ -175,7 +174,7 @@ class App extends Component {
   }
 
   render() {
-    return <div className="App">Hello World</div>
+    return <div className="App">Hello Tensorflow</div>
   }
 }
 
